@@ -3,4 +3,4 @@
 * In datadog.conf put in dogstreams: /var/log/filebeat/filebeat:parsefilebeat:parse_filebeat
 * Place parsefilebeat.py in /opt/datadog-agent/agent
 * Permission the filebeat log directory chmod 2755 /var/log/filebeat
-* Permission the filebeat log file chmod 644 /var/log/filebeat/filebeat
+* Add umask 022 to the filebeat init script to permission the log file as read
