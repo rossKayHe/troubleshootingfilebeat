@@ -4,3 +4,4 @@
 * Place parsefilebeat.py in /opt/datadog-agent/agent
 * Permission the filebeat log directory chmod 2755 /var/log/filebeat
 * Add umask 022 to the filebeat init script to permission the log file as read for all
+* On SystemD add Environment='UMASK=0022' to the [Service] section of /usr/lib/systemd/system/filebeat.service
